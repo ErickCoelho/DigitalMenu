@@ -64,6 +64,38 @@ function verificarPedido(){
     }
 }
 
-function selectitem(){
+function finishorder(){
+    let pratosummary = document.querySelector(".pratosummary .nome");
+    pratosummary.innerHTML = prato;
+    let bebidasummary = document.querySelector(".bebidasummary .nome");
+    bebidasummary.innerHTML = bebida;
+    let sobremesasummary = document.querySelector(".sobremesasummary .nome");
+    sobremesasummary.innerHTML = sobremesa;
 
+    let pratosummarypreco = document.querySelector(".pratosummary .preco");
+    pratosummarypreco.innerHTML = precoprato/100;
+    let bebidasummarypreco = document.querySelector(".bebidasummary .preco");
+    bebidasummarypreco.innerHTML = precobebida/100;
+    let sobremesasummarypreco = document.querySelector(".sobremesasummary .preco");
+    sobremesasummarypreco.innerHTML = precosobremesa/100;
+
+    let totalpreco = document.querySelector(".total .preco");
+    totalpreco.innerHTML = (precoprato + precobebida + precosobremesa)/100;
+
+    let summarybg = document.querySelector(".summarybg");
+    summarybg.classList.remove("displaynone");
+}
+
+
+function cancelarPedido() {
+    let summarybg = document.querySelector(".summarybg");
+    summarybg.classList.add("displaynone");
+}
+
+function enviarZap() {
+    const telefoneRestaurante = 5571982479937;
+    let precoTotal = (precoprato + precobebida + precosobremesa)/100;
+    const encodedText = encodeURIComponent(`Olá, gostaria de fazer o pedido: \n- Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \nTotal: R$ ${precoTotal.toFixed(2)}`);
+    const urlWhatsapp = `https://wa.me/${telefoneRestaurante}?text=${encodedText}`;
+    window.open(urlWhatsapp);
 }
