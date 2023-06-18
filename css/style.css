@@ -98,16 +98,17 @@ img {width: 100%;}
 
 .selected {
     border: 5px solid #32B72F;
+    padding: 13px 9px;
 }
 
-ion-icon {
-    font-size: 20px;
+.menu .section .options .card .cardfooter .check {
+    opacity: 0;
     color: #32B72F;
-    display: none;
+    font-size: 20px;
 }
 
-ion-icon .selected{
-    display: block;
+.menu .section .options .card.selected .cardfooter .check {
+opacity: 1;
 }
 
 

@@ -14,42 +14,42 @@ let sobremesa;
 let elementosselecionados = 0;
 
 function selecionarprato(nomedoprato, precodoprato, elemento){
-    let pratoselecionado = document.querySelector(".prato .ativo");
+    let pratoselecionado = document.querySelector(".prato .selected");
 
     if(pratoselecionado !== null){
-        pratoselecionado.classList.remove("ativo");
+        pratoselecionado.classList.remove("selected");
     }
     else elementosselecionados = elementosselecionados + 1;
 
-    elemento.classList.add("ativo");
+    elemento.classList.add("selected");
     prato = nomedoprato;
     precoprato = precodoprato;
     verificarPedido();
 }
 
 function selecionarbebida(nomedobebida, precodobebida, elemento){
-    let bebidaselecionado = document.querySelector(".bebida .ativo");
+    let bebidaselecionado = document.querySelector(".bebida .selected");
 
     if(bebidaselecionado !== null){
-        bebidaselecionado.classList.remove("ativo");
+        bebidaselecionado.classList.remove("selected");
     }
     else elementosselecionados = elementosselecionados + 1;
 
-    elemento.classList.add("ativo");
+    elemento.classList.add("selected");
     bebida = nomedobebida;
     precobebida = precodobebida;
     verificarPedido();
 }
 
 function selecionarsobremesa(nomedosobremesa, precodosobremesa, elemento){
-    let sobremesaselecionado = document.querySelector(".sobremesa .ativo");
+    let sobremesaselecionado = document.querySelector(".sobremesa .selected");
 
     if(sobremesaselecionado !== null){
-        sobremesaselecionado.classList.remove("ativo");
+        sobremesaselecionado.classList.remove("selected");
     }
     else elementosselecionados = elementosselecionados + 1;
 
-    elemento.classList.add("ativo");
+    elemento.classList.add("selected");
     sobremesa = nomedosobremesa;
     precosobremesa = precodosobremesa;
     verificarPedido();
