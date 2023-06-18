@@ -84,10 +84,33 @@ img {width: 100%;}
     margin-bottom: 15px;
 }
 
+.cardfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .cardprice {
     font-size: 16px;
     font-weight: bold;
 }
+
+.selected {
+    border: 5px solid #32B72F;
+}
+
+ion-icon {
+    font-size: 20px;
+    color: #32B72F;
+    display: none;
+}
+
+ion-icon .selected{
+    display: block;
+}
+
+
 
 
 

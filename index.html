@@ -25,11 +25,14 @@
         <div class="section">
             <div class="title">Primeiro, seu prato</div>
             <div class="options prato">
-                <div class="card" onclick="selecionarprato('Estrombelete de Frango', 14.90, this)">
+                <div class="card selected" onclick="selecionarprato('Estrombelete de Frango', 14.90, this)">
                     <img src="https://img.freepik.com/fotos-premium/frango-grelhado-com-salada-e-arroz_434193-1280.jpg">
                     <div class="cardtitle">Estrombelete de Frango</div>
                     <div class="cardsubtitle">Um pouco de batata, um pouco de salada</div>
-                    <div class="cardprice">R$ 14,90</div>
+                    <div class="cardfooter">
+                        <div class="cardprice">R$ 14,90</div>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
                 </div>
                 <div class="card" onclick="selecionarprato('Estrogonofe de Carne', 10.90, this)">
                     <img src="https://melepimenta.com/wp-content/uploads/2020/06/Estrogonofe-frango-Baixa-2.jpg">
@@ -105,6 +108,7 @@
     </div>
 
 
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 
