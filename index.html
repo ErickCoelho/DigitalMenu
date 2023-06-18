@@ -16,52 +16,150 @@
 
 
 <body>
+    <div class="summarybg displaynone">
+
+        <div class="ordersummary">
+            <div>Confirme seu pedido</div>
+            <div class="pratosummary nomepreco">
+                <div class="nome"></div>
+                <div class="preco"></div>
+            </div>
+            <div class="bebidasummary nomepreco">
+                <div class="nome"></div>
+                <div class="preco"></div>
+            </div>
+            <div class="sobremesasummary nomepreco">
+                <div class="nome"></div>
+                <div class="preco"></div>
+            </div>
+    
+            <div class="total nomepreco">
+                <div class="nome">TOTAL</div>
+                <div class="preco"></div>
+            </div>
+
+            <button class="confirmar" onclick="enviarZap()">Tudo certo, pode pedir!</button>
+            <button class="cancelar" onclick="cancelarPedido()">Cancelar</button>
+        </div>
+    </div>
+
     <div class="header">
         <div class="logo">Digital Menu</div>
         <div class="slogan">Sua comida pronta em 6 minutos</div>
     </div>
     
     <div class="menu">
-        <div>Primeiro, seu prato</div>
-        <div>
-            <img src="https://img.freepik.com/fotos-premium/frango-grelhado-com-salada-e-arroz_434193-1280.jpg">
-            <div>Estrombelete de Frango</div>
-            <div>Um pouco de batata, um pouco de salada</div>
-            <div>R$ 14,90</div>
+        <div class="section">
+            <div class="title">Primeiro, seu prato</div>
+            <div class="options prato">
+                <div class="card" onclick="selecionarprato('Estrombelete de Frango', 1490, this)">
+                    <img src="https://img.freepik.com/fotos-premium/frango-grelhado-com-salada-e-arroz_434193-1280.jpg">
+                    <div class="cardtitle">Estrombelete de Frango</div>
+                    <div class="cardsubtitle">Um pouco de batata, um pouco de salada</div>
+                    <div class="cardfooter">
+                        <div class="cardprice">R$ 14,90</div>
+                        <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                    </div>
+                </div>
+                <div class="card" onclick="selecionarprato('Estrogonofe de Carne', 1090, this)">
+                    <img src="https://melepimenta.com/wp-content/uploads/2020/06/Estrogonofe-frango-Baixa-2.jpg">
+                    <div class="cardtitle">Estrogonofe de Carne</div>
+                    <div class="cardsubtitle">Um pouco de batata, um pouco de salada</div>
+                    <div class="cardfooter">
+                        <div class="cardprice">R$ 10,90</div>
+                        <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                    </div>
+                </div>
+                <div class="card" onclick="selecionarprato('Sushi', 2390, this)">
+                    <img src="https://www.remessaonline.com.br/blog/wp-content/uploads/2022/05/culinaria-japonesa-1170x781.jpg.optimal.jpg">
+                    <div class="cardtitle">Sushi</div>
+                    <div class="cardsubtitle">Um pouco de batata, um pouco de salada</div>
+                    <div class="cardfooter">
+                        <div class="cardprice">R$ 23,90</div>
+                        <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="https://img.freepik.com/fotos-premium/frango-grelhado-com-salada-e-arroz_434193-1280.jpg">
-            <div>Estrombelete de Frango</div>
-            <div>Um pouco de batata, um pouco de salada</div>
-            <div>R$ 14,90</div>
+
+
+        <div class="section">
+            <div class="title">Agora, sua bebida</div>
+            <div class="options bebida">
+                <div class="card" onclick="selecionarbebida('Coca-cola', 990, this)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW75CPS7u0twji_xmH-6rHozyq-AtptVabBPFv1DlmM0UAWIEHVAl7YBeogxUGuHHzWfU&usqp=CAU">
+                    <div class="cardtitle">Coca-cola</div>
+                    <div class="cardsubtitle">Um pouco de batata, um pouco de salada</div>
+                    <div class="cardfooter">
+                        <div class="cardprice">R$ 9,90</div>
+                        <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                    </div>
+                </div>
+                <div class="card" onclick="selecionarbebida('Fanta uva', 490, this)">
+                    <img src="https://i.pinimg.com/originals/19/02/fb/1902fbbd90a800a656e0bbbadaebbc8d.jpg">
+                    <div class="cardtitle">Fanta uva</div>
+                    <div class="cardsubtitle">Um pouco de batata, um pouco de salada</div>
+                    <div class="cardfooter">
+                        <div class="cardprice">R$ 4,90</div>
+                        <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                    </div>
+                </div>
+                <div class="card" onclick="selecionarbebida('Heineken Zero', 1490, this)">
+                    <img src="https://clubedocervejeiro.com/wp-content/uploads/2021/12/heineken-sem-alcool.webp">
+                    <div class="cardtitle">Heineken Zero</div>
+                    <div class="cardsubtitle">Um pouco de batata, um pouco de salada</div>
+                    <div class="cardfooter">
+                        <div class="cardprice">R$ 14,90</div>
+                        <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="https://img.freepik.com/fotos-premium/frango-grelhado-com-salada-e-arroz_434193-1280.jpg">
-            <div>Estrombelete de Frango</div>
-            <div>Um pouco de batata, um pouco de salada</div>
-            <div>R$ 14,90</div>
+
+
+        <div class="section">
+            <div class="title">Por fim, sua sobremesa</div>
+            <div class="options sobremesa">
+                <div class="card" onclick="selecionarsobremesa('Petit Gateau', 1190, this)">
+                    <img src="https://www.receitadevovo.com.br/_next/image?url=https%3A%2F%2Fd2qcpt1idvpipw.cloudfront.net%2Frecipes%2F2020%2F10%2Fpetit-gateau-3_25092018203008.jpg&w=1536&q=75">
+                    <div class="cardtitle">Petit Gateau</div>
+                    <div class="cardsubtitle">Um pouco de batata, um pouco de salada</div>
+                    <div class="cardfooter">
+                        <div class="cardprice">R$ 11,90</div>
+                        <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                    </div>
+                </div>
+                <div class="card" onclick="selecionarsobremesa('Fini Beijos', 490, this)">
+                    <img src="https://jadoces.com.br/wp-content/uploads/2022/08/Beijos-de-morango-2.jpg">
+                    <div class="cardtitle">Fini Beijos</div>
+                    <div class="cardsubtitle">Um pouco de batata, um pouco de salada</div>
+                    <div class="cardfooter">
+                        <div class="cardprice">R$ 4,90</div>
+                        <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                    </div>
+                </div>
+                <div class="card" onclick="selecionarsobremesa('Cocada Branca', 190, this)">
+                    <img src="https://cdn.panelinha.com.br/receita/1531406431534-cocada.jpg">
+                    <div class="cardtitle">Cocada Branca</div>
+                    <div class="cardsubtitle">Um pouco de batata, um pouco de salada</div>
+                    <div class="cardfooter">
+                        <div class="cardprice">R$ 1,90</div>
+                        <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="https://img.freepik.com/fotos-premium/frango-grelhado-com-salada-e-arroz_434193-1280.jpg">
-            <div>Estrombelete de Frango</div>
-            <div>Um pouco de batata, um pouco de salada</div>
-            <div>R$ 14,90</div>
-        </div>
-        <div>
-            <img src="https://img.freepik.com/fotos-premium/frango-grelhado-com-salada-e-arroz_434193-1280.jpg">
-            <div>Estrombelete de Frango</div>
-            <div>Um pouco de batata, um pouco de salada</div>
-            <div>R$ 14,90</div>
-        </div>
-        <div>
-            <img src="https://img.freepik.com/fotos-premium/frango-grelhado-com-salada-e-arroz_434193-1280.jpg">
-            <div>Estrombelete de Frango</div>
-            <div>Um pouco de batata, um pouco de salada</div>
-            <div>R$ 14,90</div>
-        </div>
+
+        
     </div>
 
 
+    <div class="footer">
+        <button class="order" onclick="finishorder()">Selecionar os 3 itens para fechar o pedido</button>
+    </div>
+
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 
